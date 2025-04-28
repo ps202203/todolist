@@ -1,3 +1,17 @@
-/gradlew text eol=lf
-*.bat text eol=crlf
-*.jar binary
+# 1) Gradle wrapper 스크립트
+/gradlew      text eol=lf
+/gradlew.bat  text eol=crlf
+
+# 2) 일반 배치 파일 (Windows)
+/*.bat        text eol=crlf
+
+# 3) 셸 스크립트 (macOS/Linux)
+/*.sh         text eol=lf
+
+# 4) 바이너리 파일
+*.jar         binary
+*.png         binary
+*.jpg         binary
+
+# 5) 그 외 모든 텍스트 파일 LF로 통일
+*             text=auto eol=lf

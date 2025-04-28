@@ -1,37 +1,56 @@
+# ──────────────────────────────────────────────────────
+# 프로젝트 공통
 HELP.md
-.gradle
-build/
-!gradle/wrapper/gradle-wrapper.jar
-!**/src/main/**/build/
-!**/src/test/**/build/
 
-### STS ###
-.apt_generated
-.classpath
-.factorypath
-.project
-.settings
-.springBeans
-.sts4-cache
-bin/
-!**/src/main/**/bin/
-!**/src/test/**/bin/
+# ─ Java/Gradle
+/.gradle/
+/build/
+/out/
+/logs/
+/*.log
+*.class
 
-### IntelliJ IDEA ###
-.idea
-*.iws
-*.iml
-*.ipr
-out/
-!**/src/main/**/out/
-!**/src/test/**/out/
+# Gradle Wrapper
+/gradlew
+/gradlew.bat
+/gradle/wrapper/gradle-wrapper.jar
 
-### NetBeans ###
+# ─ 소스별 빌드 산출물
+# (src 아래 build/ 또는 bin/, out/ 디렉터리 제외)
+/**/src/**/build/
+/**/src/**/bin/
+/**/src/**/out/
+
+# ─ IDE
+## STS (Spring Tool Suite)
+/.apt_generated
+/.classpath
+/.factorypath
+/.project
+/.settings/
+/.springBeans
+/.sts4-cache
+
+## IntelliJ IDEA
+/.idea/
+/*.iws
+/*.iml
+/*.ipr
+
+## NetBeans
 /nbproject/private/
 /nbbuild/
 /dist/
 /nbdist/
 /.nb-gradle/
 
-### VS Code ###
-.vscode/
+## VS Code
+/.vscode/
+
+# ─ OS 별
+.DS_Store
+Thumbs.db
+
+# ─ 기타
+.env            # 환경 변수 파일
+node_modules/   # 프론트엔드 파일들
