@@ -11,15 +11,16 @@ java {
     toolchain {
         languageVersion = JavaLanguageVersion.of(17)
     }
+    withJavadocJar()    // javadoc.jar 아카이브 생성
 }
 
-javadoc {
-    destinationDir = file("$buildDir/docs/javadoc")  // 출력 경로
+tasks.named('javadoc') {
     options {
         encoding = 'UTF-8'
-        charSet = 'UTF-8'
-        author = true     // @author 태그 포함
-        version = true     // @version 태그 포함
+        author = true
+        version = true
+        // Oracle JDK API 링크(필요 시)
+        // links("https://docs.oracle.com/en/java/javase/17/docs/api/")
     }
 }
 
